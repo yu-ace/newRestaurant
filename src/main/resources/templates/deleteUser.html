@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>deleteUser</title>
+</head>
+
+<div id="container" style="width:1800px">
+
+  <div th:insert="commons::name"></div>
+
+  <div id="content" style="background-color:#E0FFFF;height:1000px;width:1600px;float:left;">
+    <h2>删除用户</h2>
+    <p th:text="${tip}"></p>
+    <form action="/newUser" method="post">
+      <div>
+        <label>
+          请输入用户名
+          <input type="text" name="name">
+        </label>
+      </div>
+      <div>
+        <label>
+          请输入密码
+          <input type="password" name="password">
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="submit" value="确定">
+        </label>
+      </div>
+    </form>
+
+  </div>
+
+  <div id="footer" style="background-color:#CCFFCC;clear:both;text-align:center;">
+    版权 你不可以动哦</div>
+</div>
+</html>
