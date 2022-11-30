@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>pay</title>
+</head>
+
+<div id="container" style="width:1800px">
+
+  <div th:insert="commons::name2"></div>
+
+  <div id="content" style="background-color:#E0FFFF;height:1000px;width:1600px;float:left;">
+    <p>结账</p>
+
+
+    <table border="1">
+      <tr>
+        <th>id</th>
+        <th>顾客id</th>
+        <th>总金额</th>
+      </tr>
+
+      <tr th:each="m:${order}">
+        <td th:text="${m.id}"></td>
+        <td th:text="${m.customerId}"></td>
+        <td th:text="${m.total}"></td>
+      </tr>
+
+    </table>
+
+    <form action="/payList" method="post">
+      <input type="submit" value="确认结账">
+    </form>
+
+  </div>
+
+  <div id="footer" style="background-color:#CCFFCC;clear:both;text-align:center;">
+    版权 你不可以动哦</div>
+</div>
+</html>
